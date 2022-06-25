@@ -23,3 +23,5 @@ In the constants.py file you can adjust the constants used in the model. For exa
 The multitask model is almost the same as the Baseline model, but an annotation is added with  sigmoid and linear as activation 
 
 For improve the speed of the model, a keras.mixed_precision.LossScaleOptimizer is used. Also the EarlyStopping function is used to prevent overfitting.
+
+ALL files contain short description as explaination created functions.
