@@ -13,7 +13,7 @@ Download the Pylidc library via pip install pylidc
 More information about the library and its classes go to https://pylidc.github.io/
 
 Pylidc is used to easily read the dcm and xml files to convert to NumPy. It contains a Scan, Annotation and a Consesus class.
-![alt text](https://github.com/TomReintjes/BEP-LIDC-IDRI-2022/blob/main/Figure%202022-06-09%20222958.png)
+![alt text](https://github.com/TomReintjes/BEP-LIDC-IDRI-2022/blob/main/Figure%202022-06-09%20222958.png | width=100)
 
 
 Also install the sci-kit-image library via pip install sci-kit image
