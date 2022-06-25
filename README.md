@@ -8,6 +8,7 @@ KERAS_VERSION = '2.9.0'
 TENSOR_FLOW_GPU = '2.9.1'
 
 Download the Pylidc library via pip install pylidc
+
 More information about the library and its classes go to https://pylidc.github.io/
 
 Also install the sci-kit-image library via pip install sci-kit image
