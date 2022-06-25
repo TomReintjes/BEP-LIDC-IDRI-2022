@@ -14,9 +14,11 @@ More information about the library and its classes go to https://pylidc.github.i
 Also install the sci-kit-image library via pip install sci-kit image
 
 **CODE OVERVIEW**
+
 The convert data file reads the LIDC-IDRI dataset, creates a CSV file and convert all scans to NumPy arrays. Which also are stacked on top of eachother to create a voxel as input for the 3D ResNet.
 
 Baseline model imports traintestsplit.py , reportresults.py and constants.py
+
 In the constants.py file you can adjust the constants used in the model. For example; Epochs, Inputshape, annotation choice and True/False statements
 The multitask model is almost the same as the Baseline model, but an annotation is added with  sigmoid and linear as activation 
 
