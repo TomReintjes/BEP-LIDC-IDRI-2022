@@ -3,6 +3,7 @@ Bachelor End Project - Tom Reintjes
 This repository contains code to use for the LIDC-IDRI dataset in Multitask Learning. The folder 'Code' contains python scirpts for read data, preprocessing data and use the data in the Baseline model and Multitask model in 3D ResNet50.
 
 **SETUP**
+
 PYTHON_VERSION = '3.9.7'
 KERAS_VERSION = '2.9.0'
 TENSOR_FLOW_GPU = '2.9.1'
@@ -10,6 +11,10 @@ TENSOR_FLOW_GPU = '2.9.1'
 Download the Pylidc library via pip install pylidc
 
 More information about the library and its classes go to https://pylidc.github.io/
+
+Pylidc is used to easily read the dcm and xml files to convert to NumPy. It contains a Scan, Annotation and a Consesus class.
+![alt text](https://github.com/TomReintjes/BEP-LIDC-IDRI-2022/Figure 2022-06-09 222958.png?raw=true)
+
 
 Also install the sci-kit-image library via pip install sci-kit image
 
