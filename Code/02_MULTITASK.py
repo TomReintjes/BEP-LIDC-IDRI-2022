@@ -56,9 +56,13 @@ def read_data(seed):
     data1 = lambda: loaddata_multitask(train_id, train_label_c, train_annotation)
     data2 = lambda: loaddata_multitask(valid_id, valid_label_c, valid_annotation)
     AUTOTUNE = tf.data.experimental.AUTOTUNE
-    train = tf.data.Dataset.from_generator(data1, output_types=(tf.float32, {'out_class': tf.int64, 'out_asymm': tf.float16}), output_shapes = (tf.TensorShape([128, 128, 64, 1]), {'out_class': tf.TensorShape([]), 'out_asymm': tf.TensorShape([])})).batch(BATCH_SIZE).prefetch(AUTOTUNE)
+    train = tf.data.Dataset.from_generator(data1, output_types=(tf.float32, {'out_class': tf.int64, 'out_asymm': tf.float16}),
+                                           output_shapes = (tf.TensorShape([128, 128, 64, 1]), {'out_class': tf.TensorShape([]),
+                                                                                                'out_asymm': tf.TensorShape([])})).batch(BATCH_SIZE).prefetch(AUTOTUNE)
     
-    validation = tf.data.Dataset.from_generator(data2, output_types=(tf.float32, {'out_class': tf.int64, 'out_asymm': tf.float16}), output_shapes = (tf.TensorShape([128, 128, 64, 1]), {'out_class': tf.TensorShape([]), 'out_asymm': tf.TensorShape([])})).batch(BATCH_SIZE).prefetch(AUTOTUNE)
+    validation = tf.data.Dataset.from_generator(data2, output_types=(tf.float32, {'out_class': tf.int64, 'out_asymm': tf.float16}),
+                                                output_shapes = (tf.TensorShape([128, 128, 64, 1]), {'out_class': tf.TensorShape([]),
+                                                                                                     'out_asymm': tf.TensorShape([])})).batch(BATCH_SIZE).prefetch(AUTOTUNE)
 def build_model():
     ResNet50, preprocess_input = Classifiers.get('resnet50')
     conv = ResNet50(include_top=False,
