@@ -103,7 +103,8 @@ def fit_model(model):
 def predict_model(model):
 
     data3 = lambda: loaddata(test_id, test_label_c)
-    test = tf.data.Dataset.from_generator(data3, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32), tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    test = tf.data.Dataset.from_generator(data3, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32),
+                                                                   tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
 
     predictions = model.predict(test)
     y_true = test_label_c
