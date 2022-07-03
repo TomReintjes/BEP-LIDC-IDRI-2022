@@ -56,8 +56,10 @@ def read_data(seed):
     data1 = lambda: loaddata(train_id, train_label_c)
     data2 = lambda: loaddata(valid_id, valid_label_c)
     
-    train = tf.data.Dataset.from_generator(data1, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32), tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
-    validation = tf.data.Dataset.from_generator(data2, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32), tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    train = tf.data.Dataset.from_generator(data1, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32),
+                                                                    tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    validation = tf.data.Dataset.from_generator(data2, output_signature=(tf.TensorSpec(shape=[128, 128, 64, 1], dtype=tf.float32),
+                                                                         tf.TensorSpec(shape=[], dtype=tf.int64))).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
 
 
 def build_model():
